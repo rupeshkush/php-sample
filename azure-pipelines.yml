@@ -23,3 +23,8 @@ steps:
   displayName: 'Use PHP version $(phpVersion)'
 
 
+- task: PublishBuildArtifacts@1
+  inputs:
+    artifactName: 'drop'
+    pathToPublish: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
+  displayName: 'Publish Artifact'
