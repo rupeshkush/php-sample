@@ -1,4 +1,4 @@
-# YAML build pipeline for a PHP web app on Windows
+# YAML build pipeline for a simple PHP web app on Windows
 
 trigger:
 - main
@@ -24,9 +24,7 @@ steps:
 
 - script: |
     php -v
-    composer install
-  workingDirectory: $(Build.SourcesDirectory)
-  displayName: 'Install PHP Dependencies'
+  displayName: 'Verify PHP Installation'
 
 - task: ArchiveFiles@2
   inputs:
